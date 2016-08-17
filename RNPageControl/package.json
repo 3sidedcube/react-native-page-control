@@ -22,9 +22,6 @@
     "url": "https://github.com/silentcloud/react-native-page-control/issues"
   },
   "homepage": "https://github.com/silentcloud/react-native-page-control",
-  "dependencies": {
-    "object-assign": "~4.0.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
