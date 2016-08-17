@@ -1,5 +1,3 @@
-var assign = require('object-assign');
-
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 
@@ -50,13 +48,8 @@ var PageControl = React.createClass({
             marginRight: 5
         };
 
-        var indicatorStyle = assign({}, indicatorItemStyle, this.props.indicatorStyle, {
-            backgroundColor: this.props.pageIndicatorTintColor
-        });
-
-        var currentIndicatorStyle = assign({}, indicatorItemStyle, this.props.currentIndicatorStyle, {
-            backgroundColor: this.props.currentPageIndicatorTintColor
-        });
+        var indicatorStyle = [indicatorItemStyle, {backgroundColor: this.props.pageIndicatorTintColor}, this.props.indicatorStyle];
+        var currentIndicatorStyle = [indicatorItemStyle, {backgroundColor: this.props.currentPageIndicatorTintColor},this.props.currentIndicatorStyle];
 
         var pages = [];
         for (var i = 0; i < this.props.numberOfPages; i++) {
