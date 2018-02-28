@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
 
-var PageControl = React.createClass({
+import PropTypes from "prop-types";
+import createReactClass from "create-react-class";
+
+var PageControl = createReactClass({
 
     propTypes: {
-        numberOfPages: React.PropTypes.number.isRequired,
-        currentPage: React.PropTypes.number,
-        hidesForSinglePage: React.PropTypes.bool,
-        pageIndicatorTintColor: React.PropTypes.string,
-        currentPageIndicatorTintColor: React.PropTypes.string,
-        indicatorSize: React.PropTypes.object,
+        numberOfPages: PropTypes.number.isRequired,
+        currentPage: PropTypes.number,
+        hidesForSinglePage: PropTypes.bool,
+        pageIndicatorTintColor: PropTypes.string,
+        currentPageIndicatorTintColor: PropTypes.string,
+        indicatorSize: PropTypes.object,
         indicatorStyle: View.propTypes.style,
         currentIndicatorStyle: View.propTypes.style,
-        onPageIndicatorPress: React.PropTypes.func
+        onPageIndicatorPress: PropTypes.func
     },
 
     getDefaultProps: function () {
