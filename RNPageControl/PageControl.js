@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, TouchableWithoutFeedback } from "react-native";
+import { StyleSheet, View, TouchableWithoutFeedback, ViewPropTypes } from "react-native";
 
 import PropTypes from "prop-types";
 import createReactClass from "create-react-class";
@@ -13,8 +13,8 @@ var PageControl = createReactClass({
         pageIndicatorTintColor: PropTypes.string,
         currentPageIndicatorTintColor: PropTypes.string,
         indicatorSize: PropTypes.object,
-        indicatorStyle: View.propTypes.style,
-        currentIndicatorStyle: View.propTypes.style,
+        indicatorStyle: ViewPropTypes.style,
+        currentIndicatorStyle: ViewPropTypes.style,
         onPageIndicatorPress: PropTypes.func
     },
 
